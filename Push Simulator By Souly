@@ -367,6 +367,162 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch
         end
     end
 })
+MainTab:AddParagraph("Island:", "Divine World")
+MainTab:AddToggle({
+    Name = "25.5O wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Angel",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "3.6N wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Arcangel",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Dinosaur World")
+MainTab:AddToggle({
+    Name = "300N wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Rocky",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "100De wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Dino",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Candy World")
+MainTab:AddToggle({
+    Name = "20.5Ud wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Sweet",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "2.91Dd wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Candycane",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Robotic World")
+MainTab:AddToggle({
+    Name = "550Dd wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Cyberdome",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "198TdD wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Octo Egg",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
 local MainTab = Window:MakeTab({
   Name = "Auto Fight", 
   Icon = "rbxassetid://4483345998"
