@@ -1,0 +1,1141 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- Main window
+local Window = OrionLib:MakeWindow({
+  Name = "Push Simulator By SoulyTV",
+  HidePremium = false,
+  SaveConfig = true,
+  ConfigFolder = "Push Simulator By SoulyTV"
+})
+
+-- Tabs
+local MainTab = Window:MakeTab({
+  Name = "Main", 
+  Icon = "rbxassetid://4483345998"
+})
+
+-- Elements
+MainTab:AddParagraph("Created By:", "SoulyTV")
+MainTab:AddParagraph("Discord Join:", "https://discord.gg/Usq9tKUN")
+
+MainTab:AddToggle({
+    Name = "Auto Punch",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait(0.01) do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PowerGainAuto"):FireServer()
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Auto Rebirth",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait(0.01) do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rebirth"):FireServer()
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Auto Spin",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait(0.01) do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Spins"):FireServer()
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "AUTO PUSH",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait(0.01) do
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PushGain"):FireServer()
+
+
+        end
+    end
+})
+
+
+
+local MainTab = Window:MakeTab({
+  Name = "🥚Eggs🥚", 
+  Icon = "rbxassetid://4483345998"
+})
+
+MainTab:AddParagraph("Island:", "Forest")
+MainTab:AddToggle({
+    Name = "5 Wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Basic",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "5 Wins, Auto delette all pets",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Basic",
+    [3] = {
+        ["Chicken"] = true,
+        ["Dog"] = true,
+        ["Bull"] = true,
+        ["Poodle Dog"] = true,
+        ["Pig"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "25 Wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Devious",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "125 Wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Lava",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Beatch")
+MainTab:AddToggle({
+    Name = "8,5K wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Pirate",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "132k wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Viking",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Lava")
+MainTab:AddToggle({
+    Name = "20M wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Icey",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "250M Wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Magma",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Ancient World")
+MainTab:AddToggle({
+    Name = "400B Wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Ancient",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "18T wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+            local args = {
+                [1] = "Hatch1",
+                [2] = "Egypt",
+                [3] = {}
+            }
+
+           game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Icey World")
+MainTab:AddToggle({
+    Name = "13.5Qd wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+           local args = {
+    [1] = "Hatch1",
+    [2] = "Snow",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "900Qd wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Frost",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Spacex World")
+MainTab:AddToggle({
+    Name = "69Qn wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Astro",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "4.62SX wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Alien",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Atlantis World")
+MainTab:AddToggle({
+    Name = "947Sx wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+        local args = {
+    [1] = "Hatch1",
+    [2] = "Atlantis",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "134Sp wins",
+    Default = false,
+    Callback = function(Value)
+        _G.skipEgg = Value
+        while _G.skipEgg and task.wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Ocean",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+local MainTab = Window:MakeTab({
+  Name = "Auto Fight", 
+  Icon = "rbxassetid://4483345998"
+})
+MainTab:AddParagraph("Island:", "Forest")
+MainTab:AddToggle({
+    Name = "Nerd (need 100 Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Evil Professor(need 1K Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "The Witch (need 10k Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Purplex (need 350k Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Daang Son (need 2M Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Beach World")
+MainTab:AddToggle({
+    Name = "Jack (need 8M Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Shipper (need 56M Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Captain Notooth (need 392M Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Barito (need 2.74B Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Soulcard (need 19.2B Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Lava World")
+MainTab:AddToggle({
+    Name = "Gakuya (need 38.4B Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Tezu (need 230B Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Kindo (need 921B Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Gogo Sane (need 2.76T Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "One Push Man (need 100T Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Ancient World")
+MainTab:AddToggle({
+    Name = "Mummy (need 500T Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Sekhmet (need 2.5Qd Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Mystic Warrior(need 25Qd Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Anubis (need 175Qd Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = " The pharaoh(700Qd Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Icey World")
+MainTab:AddToggle({
+    Name = "Mr. Snow (need 5.25Qn Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Icey"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Artic Knight (need 15.7Qn Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Icey"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Yeti(need 63Qn Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Icey"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Minus One (need 315Qn Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Icey"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Blizzard Bot (need 1.26Sx Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Icey"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Spacex World")
+MainTab:AddToggle({
+    Name = "Evil Astro (need 12.6Sx Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Spacex"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Alien (need 50.4Sx Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Spacex"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Mauler(need 252Sx Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Spacex"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Meerus (need 1.51Sp Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Spacex"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Vapor (need 12.0Sp Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Spacex"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Atlantis World")
+MainTab:AddToggle({
+    Name = "Shark Boi (need 72.5Sp Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Atlantis"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Octula (need 217Sp Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Atlantis"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Water Man(need 651Sp Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Atlantis"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Squid King (need 1.95O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Atlantis"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Poseidon (need 5.85O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Atlantis"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddParagraph("Island:", "Divine World")
+MainTab:AddToggle({
+    Name = "Hera (need 35.1O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Divine"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Hercules (need 105O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Divine"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Thanatos(need 315O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Divine"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Hades (need 945O Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Divine"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
+MainTab:AddToggle({
+    Name = "Zeus (need 2.83N Strong)",
+    Default = false,
+    Callback = function(Value)
+        _G.skipfight = Value
+        while _G.skipfight and task.wait() do
+              local args = {
+           [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Divine"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+           [2] = 5.373063564300537,
+           [3] = "Simulate"
+}
+
+          game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+
+
+        end
+    end
+})
