@@ -1583,3 +1583,9 @@ MainTab:AddToggle({
         end
     end
 })
+local MainTab = Window:MakeTab({
+  Name = "Credits", 
+  Icon = "rbxassetid://4483345998"
+})
+MainTab:AddParagraph("Created By:", "SoulyTV")
+MainTab:AddParagraph("Discord Join:", "https://discord.gg/Usq9tKUN")
